@@ -3,6 +3,8 @@
 + 実行後の結果をスクリーンショットとして取得。
 
 ## 使用方法
-1. pipenv install or pip install
-2. sample.config.iniをconfig.iniへ、リネーム＆編集
-3. 実行
+1. clone
+2. pipenv install または pip installを実行
+3. sample.config.iniをconfig.iniへ、リネーム
+4. config.ini中の設定値を編集
+5. 実行
