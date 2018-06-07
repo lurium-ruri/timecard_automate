@@ -19,7 +19,8 @@ def main():
     options.add_argument('--headless')
 
     # ChromeのWebDriverオブジェクトを作成する。
-    driver = webdriver.Firefox(firefox_options=options)
+    driver = webdriver.Firefox(
+        executable_path='./driver/geckodriver', firefox_options=options)
     wait = WebDriverWait(driver, 10)
 
     # クラウドタイムカードのトップ画面を開く。
