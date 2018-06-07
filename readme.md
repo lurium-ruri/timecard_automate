@@ -5,13 +5,13 @@
 ## 環境
 + python 3.6
 + pipenv
-+ FireFox(gekodriver)
++ Firefox(geckodriver)
 
 ## 使用方法
 1. clone
 1. sample.config.iniをconfig.iniへ、リネーム
 1. config.ini中の設定値を編集
-1. 使用しているOSに合ったgekodriverを[ダウンロード](https://github.com/mozilla/geckodriver/releases)
+1. 使用しているOSに合ったgeckodriverを[ダウンロード](https://github.com/mozilla/geckodriver/releases)
 1. ダウンロードした __geckodriver__ を、__'./driver'__ 以下へ配置
 1. pipenv installで関連モジュールのインストールと仮想環境を構築
 1. pipenv shellで仮想環境をアクティブに
