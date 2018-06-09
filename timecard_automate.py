@@ -4,6 +4,7 @@
 
 import configparser
 import datetime
+import os
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -19,8 +20,9 @@ def main():
     options.add_argument('--headless')
 
     # ChromeのWebDriverオブジェクトを作成する。
+    driver_path = os.path.normpath('./driver/geckodriver')
     driver = webdriver.Firefox(
-        executable_path='./driver/geckodriver', firefox_options=options)
+        executable_path=driver_path, firefox_options=options)
     wait = WebDriverWait(driver, 10)
 
     # クラウドタイムカードのトップ画面を開く。
