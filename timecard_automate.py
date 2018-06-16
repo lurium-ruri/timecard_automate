@@ -52,7 +52,6 @@ def init():
 
 
 def main():
-
     logger.info('start:timecard_automate')
 
     try:
@@ -65,6 +64,7 @@ def main():
 
 
 def top_to_home():
+    logger.debug('start:top_to_home')
 
     # クラウドタイムカードのトップ画面を開く。
     driver.get('https://cloud-timecard.appspot.com/clw/')
@@ -84,8 +84,12 @@ def top_to_home():
 
     driver.find_element_by_class_name('btn-primary').click()  # 送信->home画面へ
 
+    logger.debug('end:top_to_home')
+
 
 def input_worktime():
+    logger.debug('start:input_worktime')
+    
     # ログイン後、平日を定時で入力する
     start_date = datetime.datetime.strptime(
         config.get('update_date_range', 'Start'), "%Y-%m-%d").date()
@@ -149,6 +153,8 @@ def input_worktime():
     png = driver.find_element_by_id('main-container').screenshot_as_png
     with open('timecard_input_results.png', 'wb') as f:
         f.write(png)
+    
+    logger.debug('end:input_worktime')
 
 
 if __name__ == '__main__':
