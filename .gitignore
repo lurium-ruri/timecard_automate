@@ -1,0 +1,6 @@
+!.gitkeep
+config.ini
+timecard_input_results.png
+driver/*
+log/*
+geckodriver.log
